@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.py[cod]
+
+data/olist.zip
+data/raw/*.csv
+data/processed/*.db
+data/processed/*.db-*
+
+outputs/*.csv
+outputs/*.png
+outputs/*.html
