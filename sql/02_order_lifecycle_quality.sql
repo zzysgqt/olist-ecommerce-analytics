@@ -7,19 +7,27 @@
 -- 1. canceled 订单中，有多少已经交给承运商？多少记录为已送达？
 -- 2. delivered 订单是否全部都有送达时间？
 -- 3. “状态”和“时间记录”冲突时，为什么不应该直接删除这些订单？
+--
+-- 输出列说明：
+-- order_status              订单当前状态
+-- total_orders              该状态共有多少笔订单
+-- has_approval_time         其中多少笔记录了付款审批时间
+-- has_carrier_time          其中多少笔记录了交给承运商的时间
+-- has_customer_delivery_time 其中多少笔记录了客户实际收货时间
+-- late_deliveries           其中多少笔实际收货晚于预计收货时间
 
 SELECT
     order_status,
-    COUNT(*) AS orders,
-    SUM(CASE WHEN order_approved_at IS NOT NULL THEN 1 ELSE 0 END) AS approved_records,
-    SUM(CASE WHEN order_delivered_carrier_date IS NOT NULL THEN 1 ELSE 0 END) AS carrier_records,
-    SUM(CASE WHEN order_delivered_customer_date IS NOT NULL THEN 1 ELSE 0 END) AS delivered_records,
+    COUNT(*) AS total_orders,
+    SUM(CASE WHEN order_approved_at IS NOT NULL THEN 1 ELSE 0 END) AS has_approval_time,
+    SUM(CASE WHEN order_delivered_carrier_date IS NOT NULL THEN 1 ELSE 0 END) AS has_carrier_time,
+    SUM(CASE WHEN order_delivered_customer_date IS NOT NULL THEN 1 ELSE 0 END) AS has_customer_delivery_time,
     SUM(
         CASE
             WHEN order_delivered_customer_date > order_estimated_delivery_date THEN 1
             ELSE 0
         END
-    ) AS delivered_after_estimate
+    ) AS late_deliveries
 FROM orders
 GROUP BY order_status
-ORDER BY orders DESC;
+ORDER BY total_orders DESC;
