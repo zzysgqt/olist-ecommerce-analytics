@@ -47,7 +47,7 @@ SELECT
         CASE WHEN amount_difference > 0.01 THEN 1 ELSE 0 END
     ) AS payment_higher,
     SUM(
-        CASE WHEN amount_difference <- 0.01 THEN 1 ELSE 0 END
+        CASE WHEN amount_difference < -0.01 THEN 1 ELSE 0 END
     ) AS payment_lower,
     ROUND(100.0 * SUM(
         CASE WHEN ABS(amount_difference) > 0.01 THEN 1 ELSE 0 END
