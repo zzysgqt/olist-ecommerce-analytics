@@ -19,7 +19,8 @@ olist-ecommerce-analytics/
 │   └── processed/           # 本地 SQLite 数据库（不提交 Git）
 ├── docs/
 │   ├── data_dictionary.md   # 表粒度、主键与关联关系
-│   └── learning_path.md     # 分阶段学习路线
+│   ├── learning_path.md     # 分阶段学习路线
+│   └── monthly_kpi_findings.md # 月度指标、趋势结论与解释边界
 ├── outputs/                 # 查询结果和后续图表
 ├── scripts/
 │   ├── build_database.py    # CSV -> SQLite
@@ -47,6 +48,10 @@ python scripts/run_query.py sql/01_data_audit.sql
 3. 客户分析：新老客户、复购、留存与 RFM 分层；
 4. 商品和卖家：品类结构、卖家集中度、交付与评价；
 5. 管理看板：把 SQL 指标整理成可解释的一页式仪表盘。
+
+## 当前分析成果
+
+- [月度经营指标与趋势发现](docs/monthly_kpi_findings.md)：包含指标口径、完整月份审计、订单环比和业务解释边界。
 
 ## 分析原则
 
