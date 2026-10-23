@@ -52,6 +52,7 @@ python scripts/run_query.py sql/01_data_audit.sql
 ## 当前分析成果
 
 - [月度经营指标与趋势发现](docs/monthly_kpi_findings.md)：包含指标口径、完整月份审计、订单环比和业务解释边界。
+- [客户复购、留存与 RFM 分层](docs/customer_analysis_findings.md)：包含复购规模、购买间隔、月度新老客、同期群留存、RFM 分层与运营建议。
 
 ## 分析原则
 
