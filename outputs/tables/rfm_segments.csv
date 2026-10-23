@@ -1,0 +1,8 @@
+customer_segment,customer_count,customer_share_pct,avg_recency_days,avg_frequency_orders,avg_monetary_value,total_monetary_value
+At Risk,14799,15.85,395.29,1.07,306.82,4540655.81
+Recent High Spenders,14394,15.42,93.83,1.0,302.19,4349727.1
+Need Attention,18047,19.33,222.3,1.0,151.59,2735678.52
+Hibernating,22589,24.2,398.03,1.0,72.71,1642364.01
+Recent One-Time Buyers,21724,23.27,92.29,1.0,72.93,1584263.04
+Champions,983,1.05,90.68,2.18,372.91,366574.84
+Loyal Customers,821,0.88,185.51,2.07,247.5,203198.45

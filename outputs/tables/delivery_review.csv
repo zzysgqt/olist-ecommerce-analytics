@@ -1,0 +1,6 @@
+delay_bucket,order_count,reviewed_order_count,avg_delivery_days,avg_delay_days,avg_review_score,low_review_orders,low_review_rate_pct
+On time,88644,88163,10.88,-13.01,4.29,8100,9.19
+Up to 3 days late,2666,2640,21.08,1.4,3.77,505,19.13
+4-7 days late,1819,1773,26.69,5.13,2.32,1086,61.25
+8-14 days late,1786,1744,33.4,9.98,1.74,1362,78.1
+15+ days late,1555,1504,52.9,28.2,1.71,1183,78.66
