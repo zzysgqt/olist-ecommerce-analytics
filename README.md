@@ -20,7 +20,9 @@ olist-ecommerce-analytics/
 ├── docs/
 │   ├── data_dictionary.md   # 表粒度、主键与关联关系
 │   ├── learning_path.md     # 分阶段学习路线
-│   └── monthly_kpi_findings.md # 月度指标、趋势结论与解释边界
+│   ├── monthly_kpi_findings.md # 月度指标、趋势结论与解释边界
+│   ├── customer_analysis_findings.md # 复购、留存与 RFM 分层
+│   └── product_seller_findings.md # 品类表现与卖家集中度
 ├── outputs/                 # 查询结果和后续图表
 ├── scripts/
 │   ├── build_database.py    # CSV -> SQLite
@@ -53,6 +55,7 @@ python scripts/run_query.py sql/01_data_audit.sql
 
 - [月度经营指标与趋势发现](docs/monthly_kpi_findings.md)：包含指标口径、完整月份审计、订单环比和业务解释边界。
 - [客户复购、留存与 RFM 分层](docs/customer_analysis_findings.md)：包含复购规模、购买间隔、月度新老客、同期群留存、RFM 分层与运营建议。
+- [商品品类与卖家结构分析](docs/product_seller_findings.md)：包含品类销售表现、数据覆盖审计、卖家销售额集中度与解释边界。
 
 ## 分析原则
 
